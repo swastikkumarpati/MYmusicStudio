@@ -1,0 +1,326 @@
+html, body{
+    height: 100%;
+    width:100%;
+}
+@font-face{
+    font-family: skp;
+    src: url(./NeueHaasDisplayMediu.ttf);
+}
+*{
+    font-family:skp;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#main{
+    position: relative;
+    z-index: 10;
+}
+
+#page1{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #efeae3;
+    position: relative;
+    padding: 0 2vw;
+}
+#nav{
+    padding: 2vw 0vw;
+    width:100%;
+    /*background-color: red;*/
+    top: 0%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+    justify-content: space-between;
+    
+}
+#nav2{
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+    padding-right: 3vw;
+   
+}
+#nav2 h4{
+    padding: 10px 20px;
+    border: 1px solid black;
+    border-radius: 50px;
+    font-weight: 500;
+    font-size:18px ;
+    position: relative;
+    color: rgb(40, 38, 38);
+    transition: all ease 0.5s;
+    overflow: hidden;
+}
+#nav2 h4::after{
+    content: "";
+    left:0;
+    bottom: -100%;
+    border-radius: 50px;
+    position: absolute;
+    height: 100%;
+    width:100%;
+    background-color: black;
+    transition: all ease 0.3s;
+
+}
+#nav2 h4:hover::after{
+    bottom: 0;
+    border-radius: 50px;
+}
+#nav2 h4 a{
+    text-decoration: none;
+    color: #000000bb;
+    position: relative;
+    z-index: 10;
+}
+#nav2 h4:hover a{
+    color:#fff;
+}
+/* here the transition function is used to show some cool transition and we have given hover and  overlay as well to hide the background.
+bottom -100% is given as it will stay down and once it starts to transit it will go to 0. thus will hide that thing.*/
+
+#center{
+    height: 62vh;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    /*background-color: orange;*/
+    border-bottom: 1px solid black;
+    padding-bottom: 2.5vw;
+}
+#left h3{
+   width: 24vw;
+   font-size: 1.7vw;
+   line-height: 2vw;
+   
+}
+#center h2{
+    font-size: 9vw;
+    line-height: 7vw;
+    text-align: right;
+    padding-right:20px;
+    padding-bottom: 69px;
+}
+#page1 video{
+    width: 100%;
+    border-radius: 30px;
+    margin-top: 4vw;
+    padding-left: 5px;
+    padding-right: 5px;
+    position: relative;
+}
+#animmove{
+    position: absolute;
+    width: 47vw;
+    height: 36vw;
+  
+    right: 0;
+    top: 64vh;
+    
+    
+}
+#hh1{
+    background-color: #fe320a;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius:50% ;
+    height: 100%;
+    width: 100%;
+    filter: blur(10px);
+    position: absolute;
+}
+#hh2{
+    background: linear-gradient(#fe320a,#fe840aba);
+
+    height: 30vw;
+    width: 30vw;
+    position: absolute;
+    filter: blur(25px);
+    animation-name: anime2;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    border-radius: 50%;
+
+
+}
+#hh3{
+    background: linear-gradient(#fe320a,#fe840aba);
+   border-radius: 50%;
+   height: 30vw;
+   width: 30vw;
+    position: absolute;
+    filter: blur(25px);
+    animation-name: anime1;
+    animation-duration: 6s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+@keyframes anime1 {
+    from{
+        transform: translate(55%,-3%);
+        transform: rotate(-45deg)
+    }
+    to{
+        transform: translate(-10%,11%);
+        transform: rotate(210deg)
+    }
+}
+@keyframes anime2 {
+    from{
+        transform: translate(5%,-5%);
+        
+    }
+    to{
+        transform: translate(-20%,10%);
+        
+    }
+}
+#page2{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #efeae3;
+    padding: 8vw 0;
+    position: relative;
+
+}
+.cont{
+   
+    white-space: nowrap;
+    display: inline-block;
+    animation-name: move1;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+#movtext{
+    white-space: nowrap;
+    overflow-x: auto;
+}
+#movtext::-webkit-scrollbar{
+    display: none;
+}
+#movtext h1{
+  font-size: 6vw;
+  display: inline-block;
+}
+#roundc{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color:  #fe320a;
+    display: inline-block;
+    margin: 1vw 2vw;
+}
+@keyframes move1 {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+#page2-bot{
+    height: 70vh;
+    width: 100%;
+    padding: 3vw ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 9;
+
+}
+#page2-bot h1{
+    font-size: 3.3vw;
+    width: 55%;
+    line-height: 4vw;
+}
+#botpart2 {
+    width: 30%;
+    
+}
+#botpart2 img{
+    border-radius: 8%;
+}
+
+#page2 #gooe {
+    height: 30vw;
+    width: 30vw;
+    border-radius: 50%;
+    background-color: #fe320a;
+    background: linear-gradient(to top , #fe320a,#fe840ae0);
+    top: 50%;
+    position: absolute;
+    left: 15%;
+    filter: blur(20px);
+    animation-name: go;
+    animation-timing-function: ease-in-out;
+    animation-duration: 5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+@keyframes go {
+    from{
+        filter: blur(20px);
+        transform: translate(10%,-10%) skew(0);
+    }
+    to{
+        transform: translate(-10%,10%) skew(-15deg);
+        filter: blur(20px);
+    }
+}
+.elem{
+    height: 130px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    padding: 0 2vw;
+    align-items: center;
+   
+    border-bottom: 1px solid black;
+    position: relative;
+}
+#page3{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #efeae3;
+    padding: 4vw 0;
+}
+.elem h2{
+    font-size: 3vw;
+    position: relative;
+    z-index: 9;
+}
+.elem .overllay {
+    height: 100%;
+    width: 100%;
+    background: linear-gradient( #fe320a,#fe840ae0);
+    position: absolute;
+    left: 0;
+    top: -100%;
+    transition: all ease 0.2s;
+}
+.elem:hover .overllay{
+    top: 0;
+}
+#fiximg{
+    height: 30vw;
+    width: 23vw;
+  
+    border-radius: 10px;
+    position: fixed;
+    z-index: 99;
+    left: 50%;
+    top: 25%;
+    display: none;
+    background-position: center;
+    background-size: cover;
+}
